@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="or">
+<!DOCTYPE html><html lang="or">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,198 +15,201 @@
       justify-content: center;
       align-items: flex-start;
       min-height: 100vh;
-    }
+    }.font-card div:last-child::after {
+  content: '|';
+  animation: blink 1s infinite;
+  opacity: 0.5;
+}
 
-    .font-card div:last-child::after {
-      content: '|';
-      animation: blink 1s infinite;
-      opacity: 0.5;
-    }
+@keyframes blink {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0; }
+}
 
-    @keyframes blink {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 0; }
-    }
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .container {
-      width: 100%;
-      max-width: 800px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+h1 {
+  margin: 20px 0 10px;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+}
 
-    h1 {
-      margin: 20px 0 10px;
-      font-size: 28px;
-      color: #333;
-      text-align: center;
-    }
+textarea {
+  width: 90%;
+  max-width: 500px;
+  height: 80px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 10px auto;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
 
-    textarea {
-      width: 90%;
-      max-width: 500px;
-      height: 80px;
-      font-size: 18px;
-      border: none;
-      border-radius: 12px;
-      padding: 12px;
-      margin: 10px auto;
-      background: #fff;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    }
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
 
-    .controls {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 15px;
-      justify-content: center;
-    }
+.controls input, .controls button {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
 
-    .controls input, .controls button {
-      padding: 10px 12px;
-      font-size: 14px;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-    }
+.font-card {
+  background: #fff;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
 
-    .font-card {
-      background: #fff;
-      padding: 15px 20px;
-      margin: 10px 0;
-      border-radius: 16px;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
-      width: 90%;
-      max-width: 500px;
-    }
+.font-name {
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 5px;
+}
 
-    .font-name {
-      font-size: 13px;
-      font-weight: bold;
-      color: #666;
-      margin-bottom: 5px;
-    }
+@font-face { font-family: "Akshar"; src: url("akshar.ttf") format("truetype"); }
+@font-face { font-family: "Banita"; src: url("banita.TTF") format("truetype"); }
+@font-face { font-family: "Archana"; src: url("Archana.TTF") format("truetype"); }
+@font-face { font-family: "BalooBhaina"; src: url("BalooBhaina.ttf") format("truetype"); }
+@font-face { font-family: "Kapila"; src: url("kapila.TTF") format("truetype"); }
+@font-face { font-family: "Lohit-Odia"; src: url("Lohit-Oriya.ttf") format("truetype"); }
+@font-face { font-family: "Prabhakar"; src: url("prabhakar.TTF") format("truetype"); }
+@font-face { font-family: "Samaleswari"; src: url("samaleswari.ttf") format("truetype"); }
+@font-face { font-family: "Samyak"; src: url("Samyak.ttf") format("truetype"); }
+@font-face { font-family: "Utkal"; src: url("utkal.ttf") format("truetype"); }
+@font-face { font-family: "Rudra"; src: url("rudra.TTF") format("truetype"); }
+@font-face { font-family: "Jagannatha"; src: url("Jagannatha.TTF") format("truetype"); }
+@font-face { font-family: "Hatalekha"; src: url("hatalekha.ttf") format("truetype"); }
+@font-face { font-family: "Konark"; src: url("konark.TTF") format("truetype"); }
+@font-face { font-family: "Vasudeva"; src: url("Vasudev.TTF") format("truetype"); }
+@font-face { font-family: "Neeraj"; src: url("neeraj.TTF") format("truetype"); }
+@font-face { font-family: "Suchi"; src: url("suchi.TTF") format("truetype"); }
+@font-face { font-family: "Varuna"; src: url("varuna.TTF") format("truetype"); }
+@font-face { font-family: "Noto Serif"; src: url("NotoSerif.ttf") format("truetype"); }
+@font-face { font-family: "Subhadra"; src: url("Subhadra.TTF") format("truetype"); }
+@font-face { font-family: "Suparna"; src: url("suparna.TTF") format("truetype"); }
+@font-face { font-family: "Visu"; src: url("visu.ttf") format("truetype"); }
+@font-face { font-family: "Shouri"; src: url("shouri.TTF") format("truetype"); }
 
-    /* Font-face definitions */
-    @font-face { font-family: "Akshar"; src: url("akshar.ttf") format("truetype"); }
-    @font-face { font-family: "Banita"; src: url("banita.TTF") format("truetype"); }
-    @font-face { font-family: "Archana"; src: url("Archana.TTF") format("truetype"); }
-    @font-face { font-family: "BalooBhaina"; src: url("BalooBhaina.ttf") format("truetype"); }
-    @font-face { font-family: "Kapila"; src: url("kapila.TTF") format("truetype"); }
-    @font-face { font-family: "Lohit-Odia"; src: url("Lohit-Oriya.ttf") format("truetype"); }
-    @font-face { font-family: "Prabhakar"; src: url("prabhakar.TTF") format("truetype"); }
-    @font-face { font-family: "Samaleswari"; src: url("samaleswari.ttf") format("truetype"); }
-    @font-face { font-family: "Samyak"; src: url("Samyak.ttf") format("truetype"); }
-    @font-face { font-family: "Utkal"; src: url("utkal.ttf") format("truetype"); }
-    @font-face { font-family: "Rudra"; src: url("rudra.TTF") format("truetype"); }
-    @font-face { font-family: "Jagannatha"; src: url("Jagannatha.TTF") format("truetype"); }
-    @font-face { font-family: "Hatalekha"; src: url("hatalekha.ttf") format("truetype"); }
-    @font-face { font-family: "Konark"; src: url("konark.TTF") format("truetype"); }
-    @font-face { font-family: "Vasudeva"; src: url("Vasudev.TTF") format("truetype"); }
-    @font-face { font-family: "Neeraj"; src: url("neeraj.TTF") format("truetype"); }
-    @font-face { font-family: "Suchi"; src: url("suchi.TTF") format("truetype"); }
-    @font-face { font-family: "Varuna"; src: url("varuna.TTF") format("truetype"); }
-    @font-face { font-family: "Noto Serif"; src: url("NotoSerif.ttf") format("truetype"); }
-    @font-face { font-family: "Subhadra"; src: url("Subhadra.TTF") format("truetype"); }
-    @font-face { font-family: "Suparna"; src: url("suparna.TTF") format("truetype"); }
-    @font-face { font-family: "Visu"; src: url("visu.ttf") format("truetype"); }
-    @font-face { font-family: "Shouri"; src: url("shouri.TTF") format("truetype"); }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>🌼 Odia Font Viewer 🌼</h1>
     <textarea id="inputText" placeholder="ଏଠାରେ ଓଡ଼ିଆରେ କିଛି ଲେଖନ୍ତୁ..."></textarea>
-    
     <div class="controls">
       <input type="text" id="search" placeholder="🔍 Font name..." />
       <input type="number" id="fontSize" value="20" min="10" max="60" />
       <button onclick="copyText()">📋 Copy</button>
       <button onclick="resetText()">🗑️ Reset</button>
     </div>
-
     <div id="fontList"></div>
   </div>
-
 <script>
   const fonts = [
     "Akshar", "Banita", "Archana", "BalooBhaina", "Kapila", "Konark", "Lohit-Odia",
     "Jagannatha", "Samyak", "Utkal", "Noto Serif", "Subhadra", "Neeraj", "Suparna",
     "Hatalekha", "Rudra", "Kapila", "Prabhakar", "Shouri", "Samaleswari", "Varuna",
     "Suchi", "Vasudeva", "Visu"
-  ];
+  ];const inputText = document.getElementById('inputText'); const fontList = document.getElementById('fontList'); const fontSize = document.getElementById('fontSize'); const search = document.getElementById('search');
 
-  const inputText = document.getElementById('inputText');
-  const fontList = document.getElementById('fontList');
-  const fontSize = document.getElementById('fontSize');
-  const search = document.getElementById('search');
+function renderFonts() { const size = fontSize.value + 'px'; const query = search.value.toLowerCase(); const text = inputText.value || 'ଓଡ଼ିଆ'; fontList.innerHTML = '';
 
-  function renderFonts() {
-    const size = fontSize.value + 'px';
-    const query = search.value.toLowerCase();
-    const text = inputText.value || 'ଓଡ଼ିଆ';
-    fontList.innerHTML = '';
+fonts.forEach(font => {
+  if (!font.toLowerCase().includes(query)) return;
 
-    fonts.forEach(font => {
-      if (!font.toLowerCase().includes(query)) return;
+  const div = document.createElement('div');
+  div.className = 'font-card';
 
-      const div = document.createElement('div');
-      div.className = 'font-card';
+  const name = document.createElement('div');
+  name.className = 'font-name';
+  name.textContent = font;
 
-      const name = document.createElement('div');
-      name.className = 'font-name';
-      name.textContent = font;
+  const preview = document.createElement('div');
+  preview.style.fontFamily = font;
+  preview.style.fontSize = size;
+  preview.style.padding = '10px';
+  preview.style.background = 'white';
+  preview.style.color = 'black';
+  preview.style.display = 'inline-block';
+  preview.textContent = text;
+  preview.classList.add('preview-text');
 
-      const preview = document.createElement('div');
-      preview.style.fontFamily = font;
-      preview.style.fontSize = size;
-      preview.style.padding = '10px';
-      preview.style.background = 'white';
-      preview.style.color = 'black';
-      preview.style.display = 'inline-block';
-      preview.textContent = text;
-      preview.classList.add('preview-text');
+  const btnContainer = document.createElement('div');
+  btnContainer.style.display = 'flex';
+  btnContainer.style.gap = '10px';
+  btnContainer.style.marginTop = '10px';
 
-      // Only PDF button
-      const pdfBtn = document.createElement('button');
-      pdfBtn.textContent = '📝 Save as PDF';
-      pdfBtn.onclick = async () => {
-        const canvas = await html2canvas(preview);
-        const imgData = canvas.toDataURL('image/png');
-        const { jsPDF } = window.jspdf;
-        const pdf = new jsPDF();
-        const imgProps = pdf.getImageProperties(imgData);
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-        pdf.save(`${font}.pdf`);
-      };
+  const pdfBtn = document.createElement('button');
+  pdfBtn.textContent = '📝 Save as PDF';
+  pdfBtn.onclick = async () => {
+    const canvas = await html2canvas(preview);
+    const imgData = canvas.toDataURL('image/png');
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF();
+    const imgProps = pdf.getImageProperties(imgData);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save(`${font}.pdf`);
+  };
 
-      div.appendChild(name);
-      div.appendChild(preview);
-      div.appendChild(pdfBtn);
-      fontList.appendChild(div);
-    });
-  }
+  const linePdfBtn = document.createElement('button');
+  linePdfBtn.textContent = '📄 Line PDF';
+  linePdfBtn.onclick = async () => {
+    const canvas = await html2canvas(preview);
+    const imgData = canvas.toDataURL('image/png');
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+    const imgProps = pdf.getImageProperties(imgData);
+    const imgHeight = (imgProps.height * (pageWidth - 20)) / imgProps.width;
+    const posY = (pageHeight - imgHeight) / 2;
+    pdf.addImage(imgData, 'PNG', 10, posY, pageWidth - 20, imgHeight);
+    pdf.save(`${font}-line.pdf`);
+  };
 
-  function copyText() {
-    navigator.clipboard.writeText(inputText.value);
-  }
+  btnContainer.appendChild(pdfBtn);
+  btnContainer.appendChild(linePdfBtn);
 
-  function resetText() {
-    inputText.value = '';
-    renderFonts();
-  }
+  div.appendChild(name);
+  div.appendChild(preview);
+  div.appendChild(btnContainer);
+  fontList.appendChild(div);
+});
 
-  inputText.addEventListener('input', renderFonts);
-  fontSize.addEventListener('input', renderFonts);
-  search.addEventListener('input', renderFonts);
+}
 
-  renderFonts();
-</script>
+function copyText() { navigator.clipboard.writeText(inputText.value); }
+
+function resetText() { inputText.value = ''; renderFonts(); }
+
+inputText.addEventListener('input', renderFonts); fontSize.addEventListener('input', renderFonts); search.addEventListener('input', renderFonts);
+
+renderFonts(); </script>
+
 </body>
 </html>
