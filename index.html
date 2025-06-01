@@ -179,18 +179,43 @@ fonts.forEach(font => {
   const linePdfBtn = document.createElement('button');
   linePdfBtn.textContent = '📄 Line PDF';
   linePdfBtn.onclick = async () => {
-    const canvas = await html2canvas(preview);
-    const imgData = canvas.toDataURL('image/png');
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const pageHeight = pdf.internal.pageSize.getHeight();
-    const imgProps = pdf.getImageProperties(imgData);
-    const imgHeight = (imgProps.height * (pageWidth - 20)) / imgProps.width;
-    const posY = (pageHeight - imgHeight) / 2;
-    pdf.addImage(imgData, 'PNG', 10, posY, pageWidth - 20, imgHeight);
-    pdf.save(`${font}-line.pdf`);
-  };
+  // Temporarily fix size for accurate rendering
+  const originalWidth = preview.style.width;
+  const originalHeight = preview.style.height;
+  
+  // Set explicit size for consistent canvas size
+  preview.style.width = '600px'; // You can adjust this width as needed
+  preview.style.height = 'auto';
+
+  // Use html2canvas with explicit options
+  const canvas = await html2canvas(preview, {
+    backgroundColor: '#fff',  // Ensure white background, no transparency
+    scale: 2                  // Improve resolution of the canvas
+  });
+
+  // Reset to original after capturing
+  preview.style.width = originalWidth;
+  preview.style.height = originalHeight;
+
+  const imgData = canvas.toDataURL('image/png');
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
+
+  const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+  const imgProps = pdf.getImageProperties(imgData);
+
+  // Calculate image height proportional to PDF width minus margin
+  const margin = 10;
+  const pdfWidth = pageWidth - margin * 2;
+  const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+  // Center image vertically
+  const posY = (pageHeight - pdfHeight) / 2;
+
+  pdf.addImage(imgData, 'PNG', margin, posY, pdfWidth, pdfHeight);
+  pdf.save(`${font}-line.pdf`);
+};
 
   btnContainer.appendChild(pdfBtn);
   btnContainer.appendChild(linePdfBtn);
