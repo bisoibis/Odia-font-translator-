@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="or">
+<!DOCTYPE html>
+<html lang="or">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,104 +16,124 @@
       justify-content: center;
       align-items: flex-start;
       min-height: 100vh;
-    }.font-card div:last-child::after {
-  content: '|';
-  animation: blink 1s infinite;
-  opacity: 0.5;
-}
+    }
 
-@keyframes blink {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 0; }
-}
+    .font-card div:last-child::after {
+      content: '|';
+      animation: blink 1s infinite;
+      opacity: 0.5;
+    }
 
-.container {
-  width: 100%;
-  max-width: 800px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    @keyframes blink {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 0; }
+    }
 
-h1 {
-  margin: 20px 0 10px;
-  font-size: 28px;
-  color: #333;
-  text-align: center;
-}
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-textarea {
-  width: 90%;
-  max-width: 500px;
-  height: 80px;
-  font-size: 18px;
-  border: none;
-  border-radius: 12px;
-  padding: 12px;
-  margin: 10px auto;
-  background: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
+    h1 {
+      margin: 20px 0 10px;
+      font-size: 28px;
+      color: #333;
+      text-align: center;
+    }
 
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
-  justify-content: center;
-}
+    textarea {
+      width: 90%;
+      max-width: 500px;
+      height: 80px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      margin: 10px auto;
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      resize: vertical;
+    }
 
-.controls input, .controls button {
-  padding: 10px 12px;
-  font-size: 14px;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  cursor: pointer;
-}
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+      justify-content: center;
+    }
 
-.font-card {
-  background: #fff;
-  padding: 15px 20px;
-  margin: 10px 0;
-  border-radius: 16px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 500px;
-}
+    .controls input[type="text"],
+    .controls input[type="number"],
+    .controls input[type="color"],
+    .controls button,
+    .controls label {
+      padding: 10px 14px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      background: #fff;
+      transition: background-color 0.3s ease;
+    }
 
-.font-name {
-  font-size: 13px;
-  font-weight: bold;
-  color: #666;
-  margin-bottom: 5px;
-}
+    .controls input[type="color"] {
+      padding: 5px;
+      cursor: pointer;
+    }
 
-@font-face { font-family: "Akshar"; src: url("akshar.ttf") format("truetype"); }
-@font-face { font-family: "Banita"; src: url("banita.TTF") format("truetype"); }
-@font-face { font-family: "Archana"; src: url("Archana.TTF") format("truetype"); }
-@font-face { font-family: "BalooBhaina"; src: url("BalooBhaina.ttf") format("truetype"); }
-@font-face { font-family: "Kapila"; src: url("kapila.TTF") format("truetype"); }
-@font-face { font-family: "Lohit-Odia"; src: url("Lohit-Oriya.ttf") format("truetype"); }
-@font-face { font-family: "Prabhakar"; src: url("prabhakar.TTF") format("truetype"); }
-@font-face { font-family: "Samaleswari"; src: url("samaleswari.ttf") format("truetype"); }
-@font-face { font-family: "Samyak"; src: url("Samyak.ttf") format("truetype"); }
-@font-face { font-family: "Utkal"; src: url("utkal.ttf") format("truetype"); }
-@font-face { font-family: "Rudra"; src: url("rudra.TTF") format("truetype"); }
-@font-face { font-family: "Jagannatha"; src: url("Jagannatha.TTF") format("truetype"); }
-@font-face { font-family: "Hatalekha"; src: url("hatalekha.ttf") format("truetype"); }
-@font-face { font-family: "Konark"; src: url("konark.TTF") format("truetype"); }
-@font-face { font-family: "Vasudeva"; src: url("Vasudev.TTF") format("truetype"); }
-@font-face { font-family: "Neeraj"; src: url("neeraj.TTF") format("truetype"); }
-@font-face { font-family: "Suchi"; src: url("suchi.TTF") format("truetype"); }
-@font-face { font-family: "Varuna"; src: url("varuna.TTF") format("truetype"); }
-@font-face { font-family: "Noto Serif"; src: url("NotoSerif.ttf") format("truetype"); }
-@font-face { font-family: "Subhadra"; src: url("Subhadra.TTF") format("truetype"); }
-@font-face { font-family: "Suparna"; src: url("suparna.TTF") format("truetype"); }
-@font-face { font-family: "Visu"; src: url("visu.ttf") format("truetype"); }
-@font-face { font-family: "Shouri"; src: url("shouri.TTF") format("truetype"); }
+    .controls button:hover {
+      background-color: #f0a18c;
+      color: white;
+      box-shadow: 0 3px 8px rgba(240, 161, 140, 0.7);
+    }
 
+    .font-card {
+      background: #fff;
+      padding: 15px 20px;
+      margin: 10px 0;
+      border-radius: 16px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+      transition: background-color 0.3s ease;
+    }
+
+    .font-name {
+      font-size: 13px;
+      font-weight: bold;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    @font-face { font-family: "Akshar"; src: url("akshar.ttf") format("truetype"); }
+    @font-face { font-family: "Banita"; src: url("banita.TTF") format("truetype"); }
+    @font-face { font-family: "Archana"; src: url("Archana.TTF") format("truetype"); }
+    @font-face { font-family: "BalooBhaina"; src: url("BalooBhaina.ttf") format("truetype"); }
+    @font-face { font-family: "Kapila"; src: url("kapila.TTF") format("truetype"); }
+    @font-face { font-family: "Lohit-Odia"; src: url("Lohit-Oriya.ttf") format("truetype"); }
+    @font-face { font-family: "Prabhakar"; src: url("prabhakar.TTF") format("truetype"); }
+    @font-face { font-family: "Samaleswari"; src: url("samaleswari.ttf") format("truetype"); }
+    @font-face { font-family: "Samyak"; src: url("Samyak.ttf") format("truetype"); }
+    @font-face { font-family: "Utkal"; src: url("utkal.ttf") format("truetype"); }
+    @font-face { font-family: "Rudra"; src: url("rudra.TTF") format("truetype"); }
+    @font-face { font-family: "Jagannatha"; src: url("Jagannatha.TTF") format("truetype"); }
+    @font-face { font-family: "Hatalekha"; src: url("hatalekha.ttf") format("truetype"); }
+    @font-face { font-family: "Konark"; src: url("konark.TTF") format("truetype"); }
+    @font-face { font-family: "Vasudeva"; src: url("Vasudev.TTF") format("truetype"); }
+    @font-face { font-family: "Neeraj"; src: url("neeraj.TTF") format("truetype"); }
+    @font-face { font-family: "Suchi"; src: url("suchi.TTF") format("truetype"); }
+    @font-face { font-family: "Varuna"; src: url("varuna.TTF") format("truetype"); }
+    @font-face { font-family: "Noto Serif"; src: url("NotoSerif.ttf") format("truetype"); }
+    @font-face { font-family: "Subhadra"; src: url("Subhadra.TTF") format("truetype"); }
+    @font-face { font-family: "Suparna"; src: url("suparna.TTF") format("truetype"); }
+    @font-face { font-family: "Visu"; src: url("visu.ttf") format("truetype"); }
+    @font-face { font-family: "Shouri"; src: url("shouri.TTF") format("truetype"); }
   </style>
 </head>
 <body>
@@ -122,119 +143,120 @@ textarea {
     <div class="controls">
       <input type="text" id="search" placeholder="🔍 Font name..." />
       <input type="number" id="fontSize" value="20" min="10" max="60" />
+        <label for="colorPicker" style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+       <span style="user-select:none;">🖌️ Colour </span>
+      <input type="color" id="textColor" placeholder="colour" value="#000000" title="Text Color" />
+       </label>
+      <label><input type="checkbox" id="bold"> Bold</label>
+      <label><input type="checkbox" id="italic"> Italic</label>
+      <label><input type="checkbox" id="underline"> Underline</label>
+      <label for="bgColorPicker" style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+        <span style="user-select:none;">🖌️ Background</span>
+        <input type="color" id="bgColorPicker" value="#ffffff" title="Background Color" style="width:36px; height:36px; padding:0; border:none;"/>
+      </label>
       <button onclick="copyText()">📋 Copy</button>
       <button onclick="resetText()">🗑️ Reset</button>
     </div>
     <div id="fontList"></div>
   </div>
+
 <script>
   const fonts = [
     "Akshar", "Banita", "Archana", "BalooBhaina", "Kapila", "Konark", "Lohit-Odia",
     "Jagannatha", "Samyak", "Utkal", "Noto Serif", "Subhadra", "Neeraj", "Suparna",
-    "Hatalekha", "Rudra", "Kapila", "Prabhakar", "Shouri", "Samaleswari", "Varuna",
+    "Hatalekha", "Rudra", "Prabhakar", "Shouri", "Samaleswari", "Varuna",
     "Suchi", "Vasudeva", "Visu"
-  ];const inputText = document.getElementById('inputText'); const fontList = document.getElementById('fontList'); const fontSize = document.getElementById('fontSize'); const search = document.getElementById('search');
+  ];
 
-function renderFonts() { const size = fontSize.value + 'px'; const query = search.value.toLowerCase(); const text = inputText.value || 'ଓଡ଼ିଆ'; fontList.innerHTML = '';
+  const inputText = document.getElementById('inputText');
+  const fontList = document.getElementById('fontList');
+  const fontSize = document.getElementById('fontSize');
+  const search = document.getElementById('search');
+  const bold = document.getElementById('bold');
+  const italic = document.getElementById('italic');
+  const underline = document.getElementById('underline');
+  const textColor = document.getElementById('textColor');
+  const bgColorPicker = document.getElementById('bgColorPicker');
 
-fonts.forEach(font => {
-  if (!font.toLowerCase().includes(query)) return;
+  function renderFonts() {
+    const size = fontSize.value + 'px';
+    const query = search.value.toLowerCase();
+    const text = inputText.value || 'ଓଡ଼ିଆ';
+    const isBold = bold.checked;
+    const isItalic = italic.checked;
+    const isUnderline = underline.checked;
+    const color = textColor.value;
+    const bgColor = bgColorPicker.value;
+    fontList.innerHTML = '';
 
-  const div = document.createElement('div');
-  div.className = 'font-card';
+    fonts.forEach(font => {
+      if (!font.toLowerCase().includes(query)) return;
 
-  const name = document.createElement('div');
-  name.className = 'font-name';
-  name.textContent = font;
+      const div = document.createElement('div');
+      div.className = 'font-card';
+      div.style.backgroundColor = bgColor;
 
-  const preview = document.createElement('div');
-  preview.style.fontFamily = font;
-  preview.style.fontSize = size;
-  preview.style.padding = '10px';
-  preview.style.background = 'white';
-  preview.style.color = 'black';
-  preview.style.display = 'inline-block';
-  preview.textContent = text;
-  preview.classList.add('preview-text');
+      const name = document.createElement('div');
+      name.className = 'font-name';
+      name.textContent = font;
 
-  const btnContainer = document.createElement('div');
-  btnContainer.style.display = 'flex';
-  btnContainer.style.gap = '10px';
-  btnContainer.style.marginTop = '10px';
+      const preview = document.createElement('div');
+      preview.style.fontFamily = font;
+      preview.style.fontSize = size;
+      preview.style.padding = '10px';
+      preview.style.color = color;
+      preview.style.fontWeight = isBold ? 'bold' : 'normal';
+      preview.style.fontStyle = isItalic ? 'italic' : 'normal';
+      preview.style.textDecoration = isUnderline ? 'underline' : 'none';
+      preview.textContent = text;
 
-  const pdfBtn = document.createElement('button');
-  pdfBtn.textContent = '📝 Save as PDF';
-  pdfBtn.onclick = async () => {
-    const canvas = await html2canvas(preview);
-    const imgData = canvas.toDataURL('image/png');
-    const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF();
-    const imgProps = pdf.getImageProperties(imgData);
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-    pdf.save(`${font}.pdf`);
-  };
+      const btnContainer = document.createElement('div');
+      btnContainer.style.display = 'flex';
+      btnContainer.style.gap = '10px';
+      btnContainer.style.marginTop = '10px';
 
-  const linePdfBtn = document.createElement('button');
-  linePdfBtn.textContent = '📄 Line PDF';
-  linePdfBtn.onclick = async () => {
-  // Temporarily fix size for accurate rendering
-  const originalWidth = preview.style.width;
-  const originalHeight = preview.style.height;
-  
-  // Set explicit size for consistent canvas size
-  preview.style.width = '600px'; // You can adjust this width as needed
-  preview.style.height = 'auto';
+      const pdfBtn = document.createElement('button');
+      pdfBtn.textContent = '📝 Save as PDF';
+      pdfBtn.onclick = async () => {
+        const canvas = await html2canvas(preview);
+        const imgData = canvas.toDataURL('image/png');
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF();
+        const imgProps = pdf.getImageProperties(imgData);
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        pdf.save(`${font}.pdf`);
+      };
 
-  // Use html2canvas with explicit options
-  const canvas = await html2canvas(preview, {
-    backgroundColor: '#fff',  // Ensure white background, no transparency
-    scale: 2                  // Improve resolution of the canvas
-  });
+      btnContainer.appendChild(pdfBtn);
+      div.appendChild(name);
+      div.appendChild(preview);
+      div.appendChild(btnContainer);
+      fontList.appendChild(div);
+    });
+  }
 
-  // Reset to original after capturing
-  preview.style.width = originalWidth;
-  preview.style.height = originalHeight;
+  function copyText() {
+    navigator.clipboard.writeText(inputText.value);
+  }
 
-  const imgData = canvas.toDataURL('image/png');
-  const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
+  function resetText() {
+    inputText.value = '';
+    renderFonts();
+  }
 
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
-  const imgProps = pdf.getImageProperties(imgData);
+  inputText.addEventListener('input', renderFonts);
+  fontSize.addEventListener('input', renderFonts);
+  search.addEventListener('input', renderFonts);
+  bold.addEventListener('change', renderFonts);
+  italic.addEventListener('change', renderFonts);
+  underline.addEventListener('change', renderFonts);
+  textColor.addEventListener('input', renderFonts);
+  bgColorPicker.addEventListener('input', renderFonts);
 
-  // Calculate image height proportional to PDF width minus margin
-  const margin = 10;
-  const pdfWidth = pageWidth - margin * 2;
-  const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-  // Center image vertically
-  const posY = (pageHeight - pdfHeight) / 2;
-
-  pdf.addImage(imgData, 'PNG', margin, posY, pdfWidth, pdfHeight);
-  pdf.save(`${font}-line.pdf`);
-};
-
-  btnContainer.appendChild(pdfBtn);
-  btnContainer.appendChild(linePdfBtn);
-
-  div.appendChild(name);
-  div.appendChild(preview);
-  div.appendChild(btnContainer);
-  fontList.appendChild(div);
-});
-
-}
-
-function copyText() { navigator.clipboard.writeText(inputText.value); }
-
-function resetText() { inputText.value = ''; renderFonts(); }
-
-inputText.addEventListener('input', renderFonts); fontSize.addEventListener('input', renderFonts); search.addEventListener('input', renderFonts);
-
-renderFonts(); </script>
+  renderFonts();
+</script>
 
 </body>
 </html>
